@@ -96,9 +96,9 @@ public class PresenterSaver {
         emp.setSurname(map.get(surname));
         emp.setPatronymic(map.get(patronymic));
         emp.setPicture_url(map.get(photo));
-        if (map.get(age) != null)
+        if (!map.get(age).equals(""))
             emp.setAge(Integer.parseInt(map.get(age)));
-        if (map.get(salary) != null)
+        if (!map.get(salary).equals(""))
             emp.setSalary(Integer.parseInt(map.get(salary)));
         return emp;
     }
